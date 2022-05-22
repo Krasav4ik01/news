@@ -1,0 +1,85 @@
+{%block content%}
+
+    <div class="features">
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.slug }}</p>
+        <p>{{ post.anons }}</p>
+        <p>{{ post.full_text }}</p>
+    </div>
+
+    <a href="{% url 'news-update' post.slug %} "><button class="btn btn-success">Update</button></a>
+    <a href="{% url 'news-delete' post.slug %}"><button class="btn btn-danger">Delete</button></a>
+{%endblock%}
+
+<style>
+    body{
+        background-color: rgb(221, 208, 190);
+        
+    }
+    .features{
+        text-align: center;
+    }
+    
+    *{box-sizing: border-box}
+       
+        h2{
+            text-align: center;
+        }
+        .name{
+            padding-left: 15px;
+        }
+        .upload{
+            padding:15px 20em;
+        }
+        .container {
+            padding: 16px;
+          }
+          
+          /* Full-width input fields */
+          input[type=text] {
+            width: 50%;
+            padding: 15px;
+            margin: 1px 0 2px 1px;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+          }
+          
+          input[type=text]:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+          
+          /* Overwrite default styles of hr */
+          hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+          }
+          
+          /* Set a style for the submit/register button */
+          .btn {
+            background-color: #6f4f30;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 42.7em;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+            opacity: 0.9;
+          }
+          
+          .btn:hover {
+            opacity:1;
+          }
+          
+          /* Add a blue text color to links */
+          a {
+            color: dodgerblue;
+          }
+          
+          /* Set a grey background color and center the text of the "sign in" section */
+          .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+          }
+</style>

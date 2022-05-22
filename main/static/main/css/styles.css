@@ -1,0 +1,22 @@
+   p.zag {
+        font-family: Noto Sans;
+         font-size: medium;
+         text-align: left;
+            }
+            .people {
+                display:flex;
+
+            }
+         .text_direction text {
+             font-size: 12px;
+
+         }
+         .text_direction {
+
+                margin-inline: 10%;
+                margin-top:80px;
+                margin-top: 3%;
+
+         }
+
+

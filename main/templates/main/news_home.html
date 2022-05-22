@@ -1,0 +1,44 @@
+{%load static%}
+<link type="text/css" href="{%static 'main/css/main.css'%}" rel="stylesheet ">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> {% endcomment %}
+        {% load static %}
+        <link type="text/css" href="{% static 'main/css/styles.css' %}"  rel = "stylesheet"  />
+        </head>
+        {% include 'main/banner.html'%}
+
+	      {% load static %}
+        <link type="text/css" href="{% static 'main/css/design.css' %}"  rel = "stylesheet"  />
+<h1>News</h1>
+
+
+<form method="POST" >
+    {% csrf_token %}
+    {{form.title}} <br>
+   
+  {{form.slug}} <br>
+    {{form.anons}}<br>
+    {{form.full_text}}<br>
+   
+<div class="but">
+<button class="btn btn-success" type="submit">Add Post</button> 
+
+
+
+</div>
+
+
+<span>{{error}}</span>
+</form>
+
+<style>
+    form{
+        width: 900px;
+    }
+    .but{
+        margin-left: 60rem;
+    }
+   
+</style>

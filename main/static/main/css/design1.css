@@ -1,0 +1,48 @@
+   * {
+         box-sizing: border-box;
+       }
+
+       .column {
+         float: left;
+         width: 33%;
+
+       }
+
+       .content {
+
+           height: 90px;
+
+       }
+
+
+       a:visited {
+         color: black;
+       }
+
+       .banner {
+            display: flex;
+
+
+
+
+
+
+       }
+       .banner div {
+
+           margin-left: 3%;
+           margin-top: 3%;
+
+           height:35px;
+       }
+
+       #winners {
+           margin-left:35px;
+
+       }
+       #winners text {
+           color:black;
+       }
+       .p {
+           margin-left: 20px;
+       }

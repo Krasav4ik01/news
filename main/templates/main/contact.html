@@ -1,0 +1,165 @@
+<header>
+	{% include 'main/banner.html'%}
+	<h1>Send Email</h1>
+	{% load static %}
+        <link type="text/css" href="{% static 'main/css/design.css' %}"  rel = "stylesheet"  />
+		
+</header>
+
+
+
+<div id="form">
+
+
+
+<form method="post">
+    {% csrf_token %}
+	<div class="formgroup" id="email-form">
+		<label for="email">To</label>
+		{{form.email}}
+	</div>
+
+<div class="formgroup" id="email-form">
+    <label for="email">Title</label>
+    {{form.subject}}
+</div>
+
+<div class="formgroup" id="message-form">
+    <label for="message">Content</label>
+    {{form.content}}
+</div>
+
+	<input type="submit" value="Send your message!" />
+</form>
+</div>
+<style>
+
+
+
+body, html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1{
+	
+	font-size: 4em;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 500px;
+	color: rgb(194, 150, 85);
+	text-align: center;
+
+}
+
+.user{
+	font-size: 30px;
+	margin-left: 1400px;
+	position: relative;
+	top: -90px;
+}
+/* Animation webkit */
+@-webkit-keyframes myfirst
+{
+	0% {margin-left: -235px}
+	90% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+/* Animation */
+@keyframes myfirst
+{
+	0% {margin-left: -235px}
+	70% {margin-left: 100%;}
+	100% {margin-left: 100%;}
+}
+
+
+
+
+
+
+#form{
+	height: 100%;	
+		
+	overflow: hidden;
+	position: relative;
+	
+	
+}
+form{
+	margin: 0 auto;
+	width: 500px;
+	padding-top: 40px;
+	color: #846d35;
+	position: relative;
+	
+	
+}
+label, input, textarea{
+	display: block;
+	color: #5a4930;	
+}
+input, textarea{
+	width: 500px;	
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	
+	
+}
+input:focus, textarea:focus{
+	border: solid 3px #846d35;	
+}
+
+textarea{
+	height: 100px;	
+	resize: none; 
+	overflow: auto;
+}
+input[type="submit"]{
+	background-color: rgb(145, 124, 92);
+	color: rgb(221, 179, 179);
+	height: 50px;
+	cursor: pointer;
+	margin-top: 30px;
+	font-size: 1.29em;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+	
+}
+input[type="submit"]:hover{
+	background-color: #5a4930;
+	
+}
+label{
+	font-size: 1.5em;
+	margin-top: 20px;
+	padding-left: 20px;
+}
+.formgroup, .formgroup-active, .formgroup-error{
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-size: 10.5%;
+	
+	width: 566px;
+	padding-top: 2px;
+}
+
+a{
+	text-decoration: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	border: 0ch;
+}
+ 
+</style>

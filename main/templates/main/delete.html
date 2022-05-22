@@ -1,0 +1,9 @@
+{%block content%}
+  <div class="features">
+      <h1>Delete </h1><br>
+        {% csrf_token %}
+        <h1>{{articles.title}}</h1>
+
+      <button  class="btn btn-danger" type="submit">Delete</button>
+  </div>
+{% endblock %}

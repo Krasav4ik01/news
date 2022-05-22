@@ -1,0 +1,7 @@
+{% for r in cats%}
+    <div style="clear: left;">
+        <h3 style="margin-left: 30px">{{r.fullname}}</h3>
+        <p style="float: left; margin-left:35px"><img src="{{r.photo}}" height="250" width="360" border="1px"></p>
+        <p style="font-size: 11px">{{r.text}}</p>
+    </div>
+    {%endfor%}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sport</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% comment %} <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> {% endcomment %}
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> {% endcomment %}
+        {% load static %}
+        <link type="text/css" href="{% static 'main/css/styles.css' %}"  rel = "stylesheet"  />
+        </head>
+        {% include 'main/banner.html'%}
+
+	      {% load static %}
+        <link type="text/css" href="{% static 'main/css/womendesign.css' %}"  rel = "stylesheet"  />
+        <body>
+        <br></br>
+        <p class="zag" style="margin-left:40em;">About Famous people of KZ</p>
+        
+        
+        {% for x in video %}
+        <div class="people">
+            
+             <div class="text_direction">
+            
+            <br>  
+            <div style="margin-left:0px"> 
+            <h4>{{x.name}}</h4>
+            <text>{{x.text}}</text>
+            
+            
+              <br>
+              <h4>{{x.caption}}</h4>
+              <video class="video" width="720" height="480" controls>
+                  <source src="{{x.video.url}}" type="video/mp4">
+                </video>
+             </div>
+            
+            
+            </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr style="height:0.2px;border-width:0;color:rgb(228, 220, 220);background-color:#d7b313">
+     
+   
+    {% endfor %}
+    <br>
+    <a href="{% url 'index'%}"><button class="btn btn-dark btn-lg" style="margin:0px 20px 10px 25px">ADD POST</button></a>
+</body>
+<style>
+.video{
+  align-items: center;
+  justify-content: center;
+  margin-left: 15em;
+}
+.people{
+  text-align: center;
+  margin-left: 0;
+  padding: 0;
+}
+</style>
+</html>

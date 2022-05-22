@@ -1,0 +1,58 @@
+<div class="content">
+    
+    <div class="test">
+
+            
+
+            
+
+            <div class = "banner">
+            <div><a href = "{% url 'main'%}">Ақындар</a></div>
+           
+                 <div><a href="{% url 'writers'%}"><text style="font-size: small">Жазушылар</text></a></div>
+
+
+
+
+                <div><a href="{% url 'heroes'%}"><text style="font-size: small">Батырлар</text></a></div>
+           
+              
+            
+            <div><a href="{% url 'video-upload'%}"><text style="font-size: small">Жүктеу</text></a>
+           
+                </div>
+                <div><a href="{% url 'new'%}"><text style="font-size: small">Жаңалықтар</text></a></div>
+<div><a href="{% url 'register'%}"><text style="font-size: small">Тіркелу</text></a></div>
+      
+<div><a href="{% url 'contact'%}"><text style="font-size: small">Хат</text></a></div>
+      
+         
+
+        <div style="margin-left:700px"><span class="hello-msg"><a href=""> {{request.user}}</a> </span>
+            <span><a class="hello-msg" href="{% url 'logout' %}">Шығу</a></span>
+        </div>
+
+        
+    </div>
+            
+    </div>
+</div>
+
+<style>
+.hello-msg {
+font-size: small;
+color: black;
+padding: 0px;
+margin-left: 1px;
+margin-right: 2px;
+}
+.banner{
+    background-color: rgb(197, 156, 104);
+}
+body{
+    background-color: rgb(221, 215, 206);
+}
+a{
+    text-decoration: none;
+}
+</style>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Post</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% comment %} <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> {% endcomment %}
+        {% load static %}
+        <link type="text/css" href="{% static 'main/css/design.css' %}"  rel = "stylesheet"  />
+        </head>
+
+        <body>
+           
+    
+    
+        <br></br>
+       
+    <br></br>    
+    
+    <div class="mt-5">
+        <form action="." method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+       <h2>Text {{form.text}} </h2>
+       <h2 class="name">name {{form.name}}</h2>
+       <h2>caption  {{form.caption}}</h2>
+       <h2 class="upload">video  {{form.video}}</h2>
+        <button class="btn btn-dark btn-lg">Add Post</button>
+        </form>
+        </div>
+
+       
+
+    
+   
+
+
+
+        </body>
+        <style>
+            *{box-sizing: border-box}
+        body{
+            background-color: #c8b189;
+            
+        }
+        h2{
+            text-align: center;
+        }
+        .name{
+            padding-left: 15px;
+        }
+        .upload{
+            padding:15px 20em;
+        }
+        .container {
+            padding: 16px;
+          }
+          
+          /* Full-width input fields */
+          input[type=text] {
+            width: 50%;
+            padding: 15px;
+            margin: 1px 0 2px 1px;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+          }
+          
+          input[type=text]:focus {
+            background-color: #ddd;
+            outline: none;
+          }
+          
+          /* Overwrite default styles of hr */
+          hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+          }
+          
+          /* Set a style for the submit/register button */
+          .btn {
+            background-color: #6f4f30;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 23.5em;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+            opacity: 0.9;
+          }
+          
+          .btn:hover {
+            opacity:1;
+          }
+          
+          /* Add a blue text color to links */
+          a {
+            color: dodgerblue;
+          }
+          
+          /* Set a grey background color and center the text of the "sign in" section */
+          .signin {
+            background-color: #f1f1f1;
+            text-align: center;
+          }
+        </style>
+        </html>
